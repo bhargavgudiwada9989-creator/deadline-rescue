@@ -2,6 +2,12 @@
 
 Deadline Rescue is a task management web application built with Java and Spring Boot. It helps users organize tasks, manage deadlines, track completion status, and identify overdue tasks.
 
+## Screenshots
+
+### Dashboard
+
+![Deadline Rescue Dashboard](screenshots/dashboard.png)
+
 ## Features
 
 - Add new tasks with descriptions, deadlines, and priorities
@@ -11,7 +17,7 @@ Deadline Rescue is a task management web application built with Java and Spring 
 - Search tasks by title or description
 - Filter tasks by status, including pending, completed, overdue, and due soon
 - View dashboard statistics
-- Receive visual warnings for approaching deadlines
+- See visual warnings for approaching deadlines
 
 ## Technologies Used
 
@@ -35,22 +41,20 @@ Install the following before running the application:
 1. Clone or download this repository.
 2. Create a MySQL database named `java_project`.
 3. Configure your database connection in `src/main/resources/application.properties` using your own local database credentials.
-4. Open a terminal in the project directory.
+4. Open PowerShell in the project directory.
 5. Build the application:
 
-   ```bash
+   ```powershell
    .\mvnw.cmd clean package
    ```
 
 6. Run the generated application:
 
-   ```bash
+   ```powershell
    java -jar .\target\deadline-rescue-0.0.1-SNAPSHOT.jar
    ```
 
-7. Open your browser and visit:
-
-   `http://localhost:8080`
+7. Open your browser and visit [http://localhost:8080](http://localhost:8080).
 
 ## Learning Outcomes
 
