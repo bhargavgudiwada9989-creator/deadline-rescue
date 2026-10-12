@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task | Deadline Rescue</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Edit Task</h1>
+    <p>Update your task details below.</p>
+
+    <form th:action="@{/tasks/{id}/edit(id=${task.id})}"
+          method="post">
+
+        <label for="title">Task Title</label>
+        <input type="text" id="title" name="title"
+               th:value="${task.title}" required maxlength="200">
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description"
+                  rows="4"
+                  th:text="${task.description}"></textarea>
+
+        <label for="deadline">Deadline</label>
+        <input type="datetime-local" id="deadline" name="deadline"
+               th:value="${task.deadline != null ? #temporals.format(task.deadline, 'yyyy-MM-dd''T''HH:mm') : ''}"
+               required>
+
+        <label for="priority">Priority</label>
+        <select id="priority" name="priority" required>
+            <option value="HIGH"
+                    th:selected="${task.priority == 'HIGH'}">High</option>
+            <option value="MEDIUM"
+                    th:selected="${task.priority == 'MEDIUM'}">Medium</option>
+            <option value="LOW"
+                    th:selected="${task.priority == 'LOW'}">Low</option>
+        </select>
+
+        <button type="submit">Save Changes</button>
+        <a th:href="@{/tasks}" class="clear-button">Cancel</a>
+    </form>
+</div>
+
+</body>
+</html>

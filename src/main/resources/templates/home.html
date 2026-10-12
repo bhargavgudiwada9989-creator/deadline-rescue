@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadline Rescue</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e8edff, #f7f8ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 100%;
+            max-width: 600px;
+            padding: 50px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #3346a8;
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 30px;
+            background: #3346a8;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background: #253580;
+            transform: translateY(-3px);
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="icon">⏰</div>
+
+        <h1>Deadline Rescue</h1>
+
+        <p>Never miss an important deadline!</p>
+
+        <p>
+            Organize your tasks, track deadlines,
+            and stay on top of your work.
+        </p>
+
+        <a href="http://localhost:8080/tasks" class="button">Get Started</a>
+    </div>
+</body>
+</html>
